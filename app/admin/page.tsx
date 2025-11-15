@@ -1,7 +1,7 @@
-import FootballLogo from './ui/football-logo';
+import FootballLogo from '@/app/ui/football-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { merriweather } from './ui/fonts';
+import { merriweather } from '@/app/ui/fonts';
 
 export default function Page() {
   return (
@@ -16,13 +16,19 @@ export default function Page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-chief-200 dark:bg-chief-400 dark:border-2 dark:border-chief-200 px-6 py-10">
           <p className={`${merriweather.className}text-xl text-chief-400 dark:text-chief-50 md:text-3xl md:leading-normal`}>
-            Welcome to <strong>Roughing the Blogger</strong>. For newbies, experts, and etcetera. Football or baseball fans. Here we are all reading this.
+            Welcome to <strong>Roughing the Blogger</strong> admin site. Please log in and prove yourself!
           </p>
           <Link
-            href="/home"
+            href="/admin/login"
             className="flex items-center gap-5 self-start rounded-lg bg-chief-100 px-6 py-3 text-sm font-medium text-chief-400 transition-colors hover:bg-chief-300 hover:text-chief-50 md:text-base shadow-md dark:shadow-chief-100/50 dark:hover:shadow-chief-300/50"
           >
-            <span>Start Here</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <span>Login here</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
+          <Link
+            href="/"
+            className="flex items-center gap-5 self-start rounded-lg bg-chief-100 px-6 py-3 text-sm font-medium text-chief-400 transition-colors hover:bg-chief-300 hover:text-chief-50 md:text-base shadow-md dark:shadow-chief-100/50 dark:hover:shadow-chief-300/50"
+          >
+            <span>Back Home</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
         <div className="flex justify-center max-w-6xl mx-auto px-4">
@@ -54,4 +60,3 @@ export default function Page() {
     </main>
   );
 }
-
